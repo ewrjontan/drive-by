@@ -8,17 +8,67 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
+    <link rel="stylesheet" href="stylesheet.css">
+
+
     <title>Drive-By</title>
 </head>
 
 <body>
 
-    <header>
-        <div>
-            <h1>Drive-By</h1>
-            <h2>For car enthusiasts, by car enthusiasts</h2>
+    <header class="container">
+        <div class="row row-content">
+            <h1 class="col-12">Drive-By</h1>
+            <!--<h5 class="col-12">For enthusiasts, by enthusiasts</h5>-->
         </div>
     </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        
+        <div class="container-lg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span  class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- added pr and mr due to being offset from button, and being partially blocked at medium viewport
+            <a class="navbar-brand order-lg-2 pr-4 mr-5 bg-primary" href="index.html">Drive-By</a>-->
+
+            <a class="navbar-brand order-lg-2" href="index.html">Drive-By</a>
+            
+            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Join Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Report an Issue</a>
+                    </li>
+                </ul>
+            </div>
+
+            
+        </div>
+    </nav>
+
+
+    <!-- First Parallax Section -->
+    <div class="jumbotron paral paralsec">
+        <h1 class="display-3">For enthusiasts, by enthusiasts</h1>
+        <p class="lead">At Drive-By, we simplfy how people set up media sessions</p>
+        <p class="lead">
+            <a class="btn btn-info btn-lg btn-md" href="#" role="button">Book a session today</a>
+        </p>
+    </div>
+
 
     <div>
         <h2>Creating a simpler way to document your passion.</h2>

@@ -62,22 +62,123 @@
 
     <!-- First Parallax Section -->
     <div class="jumbotron paral paralsec">
-        <h1 class="display-3">For enthusiasts, by enthusiasts</h1>
-        <p class="lead">At Drive-By, we simplfy how people set up media sessions</p>
+        <h1 class="d-none d-sm-block">For enthusiasts, by enthusiasts</h1>
+        <h3 class="d-sm-none">For enthusiasts, by enthusiasts</h3>
+
+        <!--<p class="lead d-none d-sm-block">At Drive-By, we simplfy how people set up media sessions</p>-->
         <p class="lead">
-            <a class="btn btn-info btn-lg btn-md" href="#" role="button">Book a session today</a>
+            <a class="btn btn-info btn-lg btn-md mt-5" data-toggle="modal" data-target="#bookNowModal">Book a session today</a>
         </p>
     </div>
 
+    <!-- Book a session modal -->
+    <div class="modal fade" id="bookNowModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h5 class="modal-title text-white">Book a Session Today</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
 
-    <div>
-        <h2>Creating a simpler way to document your passion.</h2>
-        <p>Easily book and schedule photo/video shoots for your car or motorcycle.</p>
+                <div class="modal-body">
+
+                    <p>Enter your contact information and choose a date for your session.</p>
+                    
+                    <form>
+                        <div class="row form-group">
+                            <div class="col">
+                                <input type="text" id="firstNameBookHome" name="firstName" placeholder="First name" class="form-control">
+                            </div>
+
+                            <div class="col"> 
+                                <input type="text" id="lastNameBookHome" name="lastName" placeholder="Last name" class="form-control">
+                            </div>
+                       </div> 
+
+                       <div class="row form-group">
+                            <div class="col-8"> 
+                                <input type="text" id="cityBookHome" name="city" placeholder="City" class="form-control">
+                            </div>
+
+                            <div class="col">
+                                <input type="text" id="stateBookHome" name="state" placeholder="State" class="form-control">
+                            </div>
+
+
+                        </div> 
+
+                        <div class="row form-group">
+                            <div class="col"> 
+                                <input type="text" id="zipBookHome" name="zip" placeholder="Zip Code" class="form-control">
+                            </div>
+                            <div class="col"> 
+                                <input type="text" id="phoneBookHome" name="phone" placeholder="Contact number" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col"> 
+                                <input type="text" id="emailBookHome" name="email" placeholder="Email address" class="form-control">
+                            </div>
+                        </div>
+
+
+                        <div class="row form-group">
+                            <div class="col-6 text-nowrap">
+                                <label for="date" class="col-sm-6 col-form-label" for="date">Choose a date</label>
+                            </div>
+
+                            <div class="col">
+                                <input type="date" id="date" name="date" placeholder="" class="form-control">
+                            </div>
+                       </div> 
+                    </form>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+      </div>
+
+
+    <div class="container-fluid">
+        <div class="row" id="simplifyContainerHome">
+            <h1 class="col mx-auto py-5 text-center bg-dark text-white">At Drive-By, we simplify the way you make content.</h1>
+        </div>
+        <div class="row col-sm-8 mx-auto">
+            <div class="col-12 col-lg-4 text-center mx-auto py-5">
+                <h3>Choose from our database of local content creators.</h3>
+                <p>Choose a creator that meets your needs or we can help you find exactly who you are looking for.</p>
+            </div>
+
+            <div class="col-12 col-lg-4 text-center mx-auto py-5">
+                <h3>Book your shoots at the touch of a button.</h3>
+                <p>Need a session ASAP? Easily schedule a session with the earliest available local creator.</p>
+            </div>
+
+            <div class="col-12 col-lg-4 text-center mx-auto py-5">
+                <h3>Get the content that you want.</h3>
+                <p>Communicate, discuss and plan your session all in one place.</p>
+            </div>
+        </div>
     </div>
 
-    <div>
-        <h2>Your one stop shop for your automotive media needs.</h2>
-        <p>Whether you are wanting rolling shots of your build, videography at a trackday, or even cinematic drone work through a dense forest, we can help bring your idea to life.</p>
+    <div class="container-fluid">
+        <div class="row">
+                <div class="col-12 bg-dark text-white text-center mx-auto py-5">
+                    <h1>Your one stop shop for your automotive media needs.</h1>
+
+                    <h5 class="col-sm-6 mx-auto mt-5">Whether you are wanting rolling shots of your build, videography at a trackday, or even cinematic drone work through a dense forest, we can help bring your ideas to life.</h5>
+                </div>
+                
+        </div>
+        
     </div>
 
     <div>

@@ -1,3 +1,10 @@
+.logo{
+    /*font-family: Kanit;*/ 
+    /*font-family: "Alfa Slab One";*/
+    font-family: Righteous;
+
+}
+
 /* Header Parallax Element Style*/ 
 .paral {
     min-height: 600px;
@@ -33,7 +40,7 @@
 
     /* Image for Parallax Section */ 
 .paralsec {
-    background-image: url("img/home-image2A.png");
+    background-image: url("img/home-image1A.png");
     }
 
     /* Remove Bottom Margin from Jumbotron */

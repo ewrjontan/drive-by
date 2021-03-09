@@ -1,7 +1,11 @@
 .logo{
+    height: 2rem;
+}
+
+.logo-header{
     /*font-family: Kanit;*/ 
     /*font-family: "Alfa Slab One";*/
-    font-family: Righteous;
+    font-family: Righteous, "Open+Sans";
 
 }
 

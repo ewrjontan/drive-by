@@ -11,7 +11,7 @@
     <!-- Additional Css must go after Bootstrap-->
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit|Pacifico|Brygada 1918|Alfa Slab One|Righteous|Fredoka One|Shrikhand" />
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
 
 
     <title>Drive-By</title>
@@ -19,8 +19,8 @@
 
 <body>
 
-    <header class="container">
-        <div class="row row-content">
+    <!--<header class="container">
+        <div class="row row-content">-->
             
             <!--<div class="col-1 align-self-center bg-primary">
                 <a href="#">
@@ -28,14 +28,14 @@
                 </a>   
             </div>-->
 
-            <a class="col-12 align-self-center py-2" href="#">
+            <!--<a class="col-12 align-self-center py-2" href="#"></a>-->
+            
+            <!--Keep this one below to bring up brand image -->
+            <!--<a class="mx-auto pr-3 py-2" href="index.html">
                 <img src="img/dblogo.png" alt="Drive-By Logo" class="img-fluid logo"/>
             </a> 
-
-            <!--backup<h1 class="col-12 logo">Drive-By</h1>-->
-            <!--<h5 class="col-12">For enthusiasts, by enthusiasts</h5>-->
         </div>
-    </header>
+    </header>-->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         
@@ -47,10 +47,14 @@
             <!-- added pr and mr due to being offset from button, and being partially blocked at medium viewport
             <a class="navbar-brand order-lg-2 pr-4 mr-5 bg-primary" href="index.html">Drive-By</a>-->
 
-            <a class="navbar-brand order-lg-2 logo-header" href="index.html">Drive-By</a>
+            <!--<a class="navbar-brand order-lg-2 logo-header d-none" id="navbarLogo" href="index.html">Drive-By</a>-->
+            <a class="navbar-brand order-lg-2 logo-header" href="index.html"><img src="img/dbNavLogoWhite.png" alt="Drive-By Logo" class="img-fluid logo"/></a>
+
+            <!--<a class="order-lg-2 logo-header" href="index.html">Login</a>-->
+
             
-            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav order-lg-1 mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                     </li>
@@ -58,10 +62,12 @@
                         <a class="nav-link" href="#">Book Now</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Join Our Team</a>
+                        <a class="nav-link" href="#">How it Works</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">How it Works</a>
+                        <a class="nav-link" href="#">Join Our Team</a>
+                    </li><li class="nav-item">
+                        <a class="nav-link" href="#">Your Account</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Report an Issue</a>
@@ -75,13 +81,13 @@
 
 
     <!-- First Parallax Section -->
-    <div class="jumbotron paral paralsec">
+    <div class="jumbotron paral paralsec rounded-0">
         <h1 class="d-none d-sm-block">For enthusiasts, by enthusiasts</h1>
         <h3 class="d-sm-none">For enthusiasts, by enthusiasts</h3>
 
         <!--<p class="lead d-none d-sm-block">At Drive-By, we simplfy how people set up media sessions</p>-->
         <p class="lead">
-            <a class="btn btn-info btn-lg btn-md mt-5" data-toggle="modal" data-target="#bookNowModal">Book a session today</a>
+            <a class="btn btn-info btn-lg btn-md mt-5" data-toggle="modal" data-target="#bookNowModal">Book a Session Today</a>
         </p>
     </div>
 
@@ -98,7 +104,7 @@
 
                 <div class="modal-body">
 
-                    <p>Enter your contact information and choose a date for your session.</p>
+                    <p>Enter your contact information. We'll set you up with our first available photographer.</p>
                     
                     <form>
                         <div class="row form-group">
@@ -141,7 +147,7 @@
 
                         <div class="row form-group">
                             <div class="col-6 text-nowrap">
-                                <label for="date" class="col-sm-6 col-form-label" for="date">Choose a date</label>
+                                <label for="date" class="col-sm-6 col-form-label" for="date">Select a date</label>
                             </div>
 
                             <div class="col">
@@ -163,7 +169,7 @@
 
     <div class="container-fluid">
         <div class="row" id="simplifyContainerHome">
-            <h1 class="col mx-auto py-5 text-center bg-dark text-white">At Drive-By, we simplify the way you make content.</h1>
+            <h1 class="col mx-auto py-5 text-center text-white bg-dark" >At Drive-By, we simplify the way you create content.</h1>
         </div>
 
         <div class="row col-sm-8 mx-auto card-group">
@@ -211,52 +217,47 @@
         </div>
     </div>
 
-    <div class="container-fluid">
-        <div class="row">
-                <div class="col-12 bg-dark text-white text-center mx-auto py-5">
-                    <h1>Your one stop shop for your automotive media needs.</h1>
+    <!-- Second Parallax Section -->
+    <div class="jumbotron paral paralsec1 text-white">
+        <h3 class="col-12 col-lg-8 mx-auto py-5">Your one stop shop for your automotive media needs.</h3>
+        <p class="col-12 col-lg-8 mx-auto py-5">Whether you are wanting rolling shots of your build, videography at a trackday, or even cinematic drone work through a dense forest, we can help bring your ideas to life.</p>
+    </div>
 
-                    <h5 class="col-sm-6 mx-auto mt-5">Whether you are wanting rolling shots of your build, videography at a trackday, or even cinematic drone work through a dense forest, we can help bring your ideas to life.</h5>
-                </div>
-                
+
+
+    <div class="container-fluid text-center">
+        <div class="row" id="">
+            <h1 class="col mx-auto py-5 text-center text-white bg-dark" >Do you live to capture the perfect shot? Is petrol running through your veins?</h1>
+        </div>
+
+        <h3 class="col-12 py-5">Share your work. Pickup clients.</h3>
+        
+        <i class="fas fa-users fa-10x"></i>
+
+        <p class="col-12 py-5">Join our network of like-minded content creators and car enthusiasts around the world. </p>
+
+        <button class="btn btn-warning text-white btn-lg my-5">Join Our Team</button>
+    </div>
+
+    <footer class="container-fluid bg-dark">
+        
+        <div class="row">
+            <h3 class="col-12 mx-auto text-center text-white py-5">Follow Us On Social Media</h3>
         </div>
         
-    </div>
-
-    <div>
-        <h2>Is capturing the perfect shot what you live for? Is petrol running through your veins?</h2>
-        <p>Join our database of like-minded content creators and car enthusiasts around the world.</p>
-    </div>
-
-    <footer>
-        <div>
-            <h5>Links</h5>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Book now</a></li>
-                <li><a href="#">How it works</a></li>
-                <li><a href="#">For content creators</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="#">Report a problem</a></li>
-            </ul>
-        </div>
-        <div>
-            <h5>Social</h5>
-            <a href="http://instagram.com/">Instagram</a>
-            <a href="http://facebook.com/">Facebook</a>
-            <a href="http://twitter.com/">Twitter</a>
-            <a href="http://youtube.com/">YouTube</a>
-        </div>
-        <div>
-            Tel: 1-206-555-1234<br />
-            Email: campsites@nucamp.co
+        <div class="row mx-auto col-8 col-sm-4 col-md-3 pb-5">
+            <a class="col-3 text-center text-white" href="http://instagram.com/"><i class="fab fa-instagram-square fa-2x"></i></a>
+            <a class="col-3 text-white text-center" href="http://facebook.com/"><i class="fab fa-facebook-square fa-2x"></i></a>
+            <a class="col-3 text-white text-center" href="http://twitter.com/"><i class="fab fa-twitter-square fa-2x"></i></a>
+            <a class="col-3 text-white text-center" href="http://youtube.com/"><i class="fab fa-youtube-square fa-2x"></i></a>
         </div>
     </footer>
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--<script type="text/javascript" src="scripts/scripts.js"></script>-->
+
 
 </body>
 

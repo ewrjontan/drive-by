@@ -6,7 +6,6 @@
     /*font-family: Kanit;*/ 
     /*font-family: "Alfa Slab One";*/
     font-family: Righteous, "Open+Sans";
-
 }
 
 /* Header Parallax Element Style*/ 
@@ -44,11 +43,37 @@
 
     /* Image for Parallax Section */ 
 .paralsec {
-    background-image: url("img/home-image1A.png");
+        background-image: url("/img/home-image1A.png");
     }
+
+.paralsec1 {
+        background-image: url("/img/home-image2A.png");
+    }
+
 
     /* Remove Bottom Margin from Jumbotron */
 .jumbotron{margin-bottom: 0;}
+
+
+
+
+footer{
+    /*height: 100px;*/
+}
+
+
+
+
+.bg-orange{
+    background-color: #DDD4AC ;
+}
+
+/*colors*/
+
+.blue{
+    background-color: #3F88D5;
+}
+
 
 /*#simplifyContainerHome{
     background-color: black;

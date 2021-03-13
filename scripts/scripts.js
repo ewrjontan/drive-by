@@ -1,15 +1,8 @@
-
-
-/*Jquery
-
+/*
 $(function(){
     console.log('Hello world');
 
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 0) {
-            $('#navbar-logo').fadeIn();                     
-        }
-    });
+
 })*/
 
 

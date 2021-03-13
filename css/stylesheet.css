@@ -8,6 +8,10 @@
     font-family: Righteous, "Open+Sans";
 }
 
+/*h1,h3{
+    font-family: Righteous, "Open+Sans";
+}*/
+
 /* Header Parallax Element Style*/ 
 .paral {
     min-height: 600px;

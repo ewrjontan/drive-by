@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- Additional Css must go after Bootstrap-->
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit|Pacifico|Brygada 1918|Alfa Slab One|Righteous|Fredoka One|Shrikhand" />
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <title>Drive-By</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"> 
+        <div class="container-lg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span  class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand order-lg-2 logo-header" href="index.html"><img src="img/dbNavLogoWhite.png" alt="Drive-By Logo" class="img-fluid logo"/></a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav order-lg-1 mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="howitworks.html">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="join.html">Join Our Team</a>
+                    </li><li class="nav-item">
+                        <a class="nav-link" href="account.html">Your Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="issues.html">Report an Issue</a>
+                    </li>
+                </ul>
+            </div>      
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row col col-sm-6 col-lg-4 mx-auto my-5">
+            <h1 class="mx-auto pb-5">Want to report an issue or leave feedback?</h1>
+            <p>Your satisfaction is important to us. If you are not happy with your product, services or even our website/application, we want to know about it. Please leave a detailed message, including the date of your session as well as your content creator (if applicable) and we will respond promptly.</p>
+        </div>
+
+        <div class="row">
+            <form class="mx-auto col text-center col-sm-6 col-lg-4">
+                <div class="mb-3">
+                    <input type="text" id="issuesFirstName" name="firstName" placeholder="First name" class="form-control">
+                </div>
+
+                <div class="mb-3"> 
+                    <input type="text" id="issuesLastName" name="lastName" placeholder="Last name" class="form-control">
+                </div>
+
+                <div class="mb-3"> 
+                    <input type="text" id="issuesPhone" name="phone" placeholder="Contact number" class="form-control">
+                </div>
+
+                <div class="mb-3"> 
+                    <input type="text" id="issuesEmail" name="email" placeholder="Email address" class="form-control">
+                </div>
+
+              <textarea class="form-control" id="issuesTextArea" rows="5" placeholder="Questions, comments and concerns?"></textarea>
+
+                <button class="btn btn-warning btn-lg text-white my-5">Submit</button>
+            </form>
+        </div> 
+    </div>
+    
+
+    <footer class="container-fluid bg-dark">
+        
+        <div class="row">
+            <h3 class="col-12 mx-auto text-center text-white py-5">Follow Us On Social Media</h3>
+        </div>
+        
+        <div class="row mx-auto col-8 col-sm-4 col-md-3 pb-5">
+            <a class="col-3 text-center text-white" href="http://instagram.com/"><i class="fab fa-instagram-square fa-2x"></i></a>
+            <a class="col-3 text-white text-center" href="http://facebook.com/"><i class="fab fa-facebook-square fa-2x"></i></a>
+            <a class="col-3 text-white text-center" href="http://twitter.com/"><i class="fab fa-twitter-square fa-2x"></i></a>
+            <a class="col-3 text-white text-center" href="http://youtube.com/"><i class="fab fa-youtube-square fa-2x"></i></a>
+        </div>
+    </footer>
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+
+
+</body>
+
+</html>

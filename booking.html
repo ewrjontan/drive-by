@@ -29,10 +29,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav order-lg-1 mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="booking.html">Book Now</a>
+                        <a class="nav-link active" href="#">Book Now<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="howitworks.html">How it Works</a>
@@ -42,8 +42,8 @@
                     </li><li class="nav-item">
                         <a class="nav-link" href="account.html">Your Account</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Report an Issue</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="issues.html">Report an Issue</a>
                     </li>
                 </ul>
             </div>      
@@ -52,34 +52,35 @@
 
 
     <div class="container-fluid">
-        <div class="row col col-sm-6 col-lg-4 mx-auto my-5">
-            <h1 class="mx-auto pb-5">Want to report an issue or leave feedback?</h1>
-            <p>Your satisfaction is important to us. If you are not happy with your product, services or even our website/application, we want to know about it. Please leave a detailed message, including the date of your session as well as your content creator (if applicable) and we will respond promptly.</p>
+        <div class="row mx-auto text-center">
+            <h1 class="mx-auto col-sm-8 my-5">At Drive-By, our goal is to get you the perfect shots of your pride and joy.</h1>
+
+            <p class="mx-auto col-sm-5 my-5">Choose from our database of local content creators. Don't know where to start? We'll help set you up with the perfect candidate that fits your goals and your budget.</p>
         </div>
 
-        <div class="row">
-            <form class="mx-auto col text-center col-sm-6 col-lg-4">
-                <div class="mb-3">
-                    <input type="text" id="issuesFirstName" name="firstName" placeholder="First name" class="form-control">
+        <div class="row mx-auto my-5">
+            <h3 class="mx-auto col-12 text-center">Let's start with your location.</h3>
+            
+            <form class="mx-auto my-5 text-center" >
+                <div class="form-row">
+                    <div class="col-12 pb-3 col-sm-7">
+                        <input type="text" class="form-control" id="bookCityInput" placeholder="City">
+                    </div>
+                    <div class="col-7 col-sm-3 pb-3">
+                        <input type="text" class="form-control" id="bookStateInput" placeholder="State">
+                    </div>
+                    <div class="col-5 col-sm-2 pb-3">
+                        <input type="text" class="form-control" id="bookZipInput" placeholder="Zip">
+                    </div>
                 </div>
 
-                <div class="mb-3"> 
-                    <input type="text" id="issuesLastName" name="lastName" placeholder="Last name" class="form-control">
-                </div>
-
-                <div class="mb-3"> 
-                    <input type="text" id="issuesPhone" name="phone" placeholder="Contact number" class="form-control">
-                </div>
-
-                <div class="mb-3"> 
-                    <input type="text" id="issuesEmail" name="email" placeholder="Email address" class="form-control">
-                </div>
-
-              <textarea class="form-control" id="issuesTextArea" rows="5" placeholder="Questions, comments and concerns?"></textarea>
-
-                <button class="btn btn-warning btn-lg text-white my-5">Submit</button>
+                <button class="btn btn-lg btn-primary my-5">Submit</button>
             </form>
-        </div> 
+
+            
+
+        </div>
+        
     </div>
     
 

@@ -82,3 +82,7 @@ footer{
 /*#simplifyContainerHome{
     background-color: black;
 }*/
+
+#mapBoxContainer{
+    height: 500px;
+}

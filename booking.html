@@ -11,6 +11,10 @@
     <!-- Additional Css must go after Bootstrap-->
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit|Pacifico|Brygada 1918|Alfa Slab One|Righteous|Fredoka One|Shrikhand" />
+    
+    <!-- mapbox -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    
     <link rel="stylesheet" href="css/stylesheet.css">
 
     <title>Drive-By</title>
@@ -76,10 +80,10 @@
 
                 <button class="btn btn-lg btn-primary my-5">Submit</button>
             </form>
-
-            
-
         </div>
+
+        <!-- insert map code here -->
+        <div class="row col-8 mb-5 mx-auto" id="mapBoxContainer"></div>
         
     </div>
     
@@ -102,6 +106,8 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/mapbox-gl/dist/mapbox-gl.js"></script>
+
     <script type="text/javascript" src="scripts/scripts.js"></script>
 
 

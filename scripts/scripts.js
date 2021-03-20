@@ -23,3 +23,15 @@ let logoShiftOnScroll = function () {
 };
 
 window.addEventListener("scroll", logoShiftOnScroll);*/
+
+/* For Mapbox */
+
+mapboxgl.accessToken = 'pk.eyJ1Ijoiam9uc2NhcmRlbmFzIiwiYSI6ImNrbWd4cjh2eDAxeG0ycHFtcnZka3Ixc2QifQ.ZxoR0Q_vx5w5P8POX-wuWQ';
+
+
+let map = new mapboxgl.Map({
+    container: 'mapBoxContainer',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-95.9345, 41.2565],
+    zoom: 10
+});

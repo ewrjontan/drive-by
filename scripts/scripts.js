@@ -44,8 +44,9 @@ $(function(){
 
             console.log(bookLocationArr);
 
+            $("#mapBoxContainer").css("display", "block"); 
             createMap(bookLocationArr);
-             
+            
              /*$("#mapBoxContainer").html(data);*/
         });
     });

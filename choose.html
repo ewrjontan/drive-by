@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- Additional Css must go after Bootstrap-->
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit|Pacifico|Brygada 1918|Alfa Slab One|Righteous|Fredoka One|Shrikhand" />
+    
+    <!-- mapbox -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <title>Drive-By</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"> 
+        <div class="container-lg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span  class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand order-lg-2 logo-header" href="index.html"><img src="img/dbNavLogoWhite.png" alt="Drive-By Logo" class="img-fluid logo"/></a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav order-lg-1 mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="booking.html">Book Now<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="howitworks.html">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="join.html">Join Our Team</a>
+                    </li><li class="nav-item">
+                        <a class="nav-link" href="account.html">Your Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="issues.html">Report an Issue</a>
+                    </li>
+                </ul>
+            </div>      
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row mx-auto text-center">
+            <h1 class="mx-auto col-sm-8 my-5" id="chooseNumOfLocals"></h1>
+
+            <p class="mx-auto col-sm-5 my-5">Choose from our database of local content creators. Don't know where to start? We'll help set you up with the perfect candidate that fits your goals and your budget.</p>
+        </div>
+
+        <div class="row mx-auto my-5">
+            
+            
+        </div>
+
+
+    </div>
+    
+
+    <footer class="container-fluid bg-dark">
+        
+        <div class="row">
+            <h3 class="col-12 mx-auto text-center text-white py-5">Follow Us On Social Media</h3>
+        </div>
+        
+        <div class="row mx-auto col-8 col-sm-4 col-md-3 pb-5">
+            <a class="col-3 text-center text-white" href="http://instagram.com/"><i class="fab fa-instagram-square fa-2x"></i></a>
+            <a class="col-3 text-white text-center" href="http://facebook.com/"><i class="fab fa-facebook-square fa-2x"></i></a>
+            <a class="col-3 text-white text-center" href="http://twitter.com/"><i class="fab fa-twitter-square fa-2x"></i></a>
+            <a class="col-3 text-white text-center" href="http://youtube.com/"><i class="fab fa-youtube-square fa-2x"></i></a>
+        </div>
+    </footer>
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- For map box -->
+    <script src="node_modules/mapbox-gl/dist/mapbox-gl.js"></script>
+
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+
+
+</body>
+
+</html>

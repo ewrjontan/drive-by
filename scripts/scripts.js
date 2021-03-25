@@ -1,7 +1,7 @@
 
 /* For Mapbox */
-mapboxgl.accessToken = 'pk.eyJ1Ijoiam9uc2NhcmRlbmFzIiwiYSI6ImNrbWd4cjh2eDAxeG0ycHFtcnZka3Ixc2QifQ.ZxoR0Q_vx5w5P8POX-wuWQ';
-
+//mapboxgl.accessToken = 'pk.eyJ1Ijoiam9uc2NhcmRlbmFzIiwiYSI6ImNrbWd4cjh2eDAxeG0ycHFtcnZka3Ixc2QifQ.ZxoR0Q_vx5w5P8POX-wuWQ';
+/*
 function createMap(coordinates){
     let map = new mapboxgl.Map({
         container: 'mapBoxContainer',
@@ -9,7 +9,7 @@ function createMap(coordinates){
         center: coordinates,
         zoom: 10
     });
-}
+}*/
 
 
 /* Users */
@@ -35,8 +35,61 @@ let user3 = {
     zipCode: "68154"
 };
 
-let userDatabaseArr = [user1, user2, user3];
+let user4 = {
+    firstName: "Matt",
+    lastName: "Donahue",
+    age: 50,
+    zipCode: "65202"
+};
+
+let user5 = {
+    firstName: "Jon",
+    lastName: "Bon Jovi",
+    age: 25,
+    zipCode: "65201"
+};
+
+let user6 = {
+    firstName: "Tony",
+    lastName: "Bologna",
+    age: 38,
+    zipCode: "65203"
+};
+
+let user7 = {
+    firstName: "Michael",
+    lastName: "Meyers",
+    age: 50,
+    zipCode: "07052"
+};
+
+let user8 = {
+    firstName: "Katie",
+    lastName: "Rath",
+    age: 25,
+    zipCode: "07056"
+};
+
+let user9 = {
+    firstName: "Brenna",
+    lastName: "Longacre",
+    age: 25,
+    zipCode: "68154"
+};
+
+let user10 = {
+    firstName: "Josh",
+    lastName: "Popejoy",
+    age: 29,
+    zipCode: "07052"
+};
+
+
+
+let userDatabaseArr = [user1, user2, user3, user4, user5, user6, user7, user8, user9, user10];
 let localUserArr = [];
+let numOfLocals;
+
 
 /* Zip Code Api variables */
 let zipCodesdata;
@@ -76,6 +129,10 @@ $(function(){
         console.log(zipCodeArr);
         findLocals(userDatabaseArr, zipCodeArr);
     })
+
+    /*display number of locals on choose page*/
+    $("#chooseNumOfLocals").text(numOfLocals);
+
 });
     
 
@@ -92,16 +149,23 @@ function createZipArr(input){
 function findLocals(userArr, zipCodeArr){
     for (let i=0; i<userArr.length; i++){
         let currentUserZip = userArr[i].zipCode;
-        console.log(currentUserZip);
+        console.log("current zip in DB:", currentUserZip);
 
         if (zipCodeArr.includes(currentUserZip)){
-            console.log("currentUserZip is in zip code array");
+            console.log("currentUserZip is in zip code array and pushed");
             //add user to array
+            localUserArr.push(currentUserZip);
         }
 
     }
+    numOfLocals = localUserArr.length;
+    console.log(numOfLocals);
+
+
 }
     
+
+
     
     
     /*For Position Stack */

@@ -19,7 +19,8 @@ let user1 = {
     lastName: "Doe",
     age: 50,
     zipCode: "68123",
-    rating: 5
+    rating: 5,
+    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
 };
 
 let user2 = {
@@ -27,7 +28,8 @@ let user2 = {
     lastName: "Johnson",
     age: 25,
     zipCode: "68102",
-    rating: 4
+    rating: 4,
+    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
 };
 
 let user3 = {
@@ -35,7 +37,8 @@ let user3 = {
     lastName: "Matooza",
     age: 38,
     zipCode: "68154",
-    rating: 3
+    rating: 3,
+    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
 };
 
 let user4 = {
@@ -43,7 +46,8 @@ let user4 = {
     lastName: "Donahue",
     age: 50,
     zipCode: "65202",
-    rating: 3
+    rating: 3,
+    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
 };
 
 let user5 = {
@@ -51,7 +55,8 @@ let user5 = {
     lastName: "Bon Jovi",
     age: 25,
     zipCode: "65201",
-    rating: 1
+    rating: 1,
+    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
 };
 
 let user6 = {
@@ -59,7 +64,8 @@ let user6 = {
     lastName: "Bologna",
     age: 38,
     zipCode: "65203",
-    rating: 5
+    rating: 5,
+    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
 };
 
 let user7 = {
@@ -67,7 +73,8 @@ let user7 = {
     lastName: "Meyers",
     age: 50,
     zipCode: "07052",
-    rating: 2
+    rating: 2,
+    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
 };
 
 let user8 = {
@@ -75,7 +82,8 @@ let user8 = {
     lastName: "Rathshire",
     age: 25,
     zipCode: "07056",
-    rating: 4
+    rating: 4,
+    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
 };
 
 let user9 = {
@@ -83,7 +91,8 @@ let user9 = {
     lastName: "Longacre",
     age: 25,
     zipCode: "68154",
-    rating: 5
+    rating: 5,
+    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
 };
 
 let user10 = {
@@ -91,7 +100,8 @@ let user10 = {
     lastName: "Popejoy",
     age: 29,
     zipCode: "07052",
-    rating: 3
+    rating: 3,
+    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
 };
 
 
@@ -111,6 +121,7 @@ let zipCodeArr = ["68123", "68113", "68005", "68056", "68133", "68147", "68157",
 $(function(){
     /*for zip-codes api */
     $("#bookingLocationSubmitBtn").on( "click", function(){
+        $('html,body').scrollTop(0);
         let bookZipInput = $("#bookZipInput").val();;
         let zipCodeURL = "https://api.zip-codes.com/ZipCodesAPI.svc/1.0/FindZipCodesInRadius?zipcode=" + bookZipInput + "&minimumradius=0&maximumradius=30&country=US&key=8JX5Z0F8EZ2RILIO7LO3";
         console.log("zipcode:", bookZipInput);
@@ -177,22 +188,36 @@ function findLocals(userArr, zipCodeArr){
 }
 
 function displayCards(localUserArr){
-    
+
     for (let i=0; i < localUserArr.length; i++){
         let name = localUserArr[i].firstName + " " + localUserArr[i].lastName;
         let age = localUserArr[i].age;
         let rating = localUserArr[i].rating;
+        let about = localUserArr[i].about;
         console.log(name);
         console.log(age);
         console.log(rating);
 
         let card = document.createElement('div');
-        card.className = 'card col-12 col-md-4';
+        card.className = 'card mb-4 style="max-width: 800px;"';
 
+        let rowNoGutters = document.createElement('div');
+        rowNoGutters.className = "row no-gutters";
+
+        let imageContainer = document.createElement('div');
+        imageContainer.className = "col-md-4";
+
+        let cardBodyContainer = document.createElement('div');
+        cardBodyContainer.className = "col-md-8"
+
+        /* for profile images in future 
         let cardImage = document.createElement('img');
-        cardImage.className = "card-img-top";
+        cardImage.className = "card-img-top";*/
         //src
         //alt
+
+        let cardImage = document.createElement('i');
+        cardImage.className = "card-img-top fas fa-user fa-7x text-center mt-5"
 
         let cardBody = document.createElement('div');
         cardBody.className = 'card-body';
@@ -202,40 +227,52 @@ function displayCards(localUserArr){
         cardName.innerHTML = name;
 
         let cardAbout = document.createElement('p');
-        cardAbout.className = 'about-text';
+        cardAbout.className = 'card-text';
+        cardAbout.innerHTML = about;
 
-        let cardFooter = document.createElement('div');
-        cardFooter.className = 'card-footer';
+        let cardFooter = document.createElement('p');
+        cardFooter.className = 'card-text';
 
-        let footerText = document.createElement('small');
-        footerText.className = "text-muted";
-        footerText.innerHTML = rating + "Stars";
+        let ratingText = document.createElement('small');
+        ratingText.className = "text-muted";
+        ratingText.innerHTML = rating + " Stars";
 
+        imageContainer.appendChild(cardImage);
+
+        cardFooter.appendChild(ratingText);
 
         cardBody.appendChild(cardName);
         cardBody.appendChild(cardAbout);
-        cardFooter.appendChild(footerText);
+        cardBody.appendChild(cardFooter);
 
-        card.appendChild(cardImage);
-        card.appendChild(cardBody);
-        card.appendChild(cardFooter);
+        cardBodyContainer.appendChild(cardBody);
 
-        document.getElementById("bookCardDeck").appendChild(card);
+        rowNoGutters.appendChild(imageContainer);
+        rowNoGutters.appendChild(cardBodyContainer);
+
+        card.appendChild(rowNoGutters);
+
+        document.getElementById("bookLocalUserCardsContainer").appendChild(card);
     }
 
     document.getElementById("bookLocalUserCardsContainer").classList.remove("d-none");
 
-    /*document.getElementById("bookCardDeck").innerHTML = 
-    <div class="card col-12 col-md-3">
-        <img class="card-img-top" src="#" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
-    </div>*/
+    /*<div class="card mb-3" style="max-width: 800px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="..." class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text">
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>>*/
 
 }
    

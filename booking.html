@@ -57,17 +57,17 @@
 
     <div class="container-fluid">
         <div class="row mx-auto text-center">
-            <h1 class="mx-auto col-sm-8 my-5">At Drive-By, our goal is to get you the perfect shots of your pride and joy.</h1>
+            <h1 class="mx-auto col-sm-8 my-5" id="bookMainHeader">At Drive-By, our goal is to get you the perfect shots of your pride and joy.</h1>
 
-            <p class="mx-auto col-sm-5 my-5">Choose from our database of local content creators. Don't know where to start? We'll help set you up with the perfect candidate that fits your goals and your budget.</p>
+            <p class="mx-auto col-sm-5 my-5" id="bookFirstParagraph">Choose from our database of local content creators. Don't know where to start? We'll help set you up with the perfect candidate that fits your goals and your budget.</p>
         </div>
 
-        <div class="row mx-auto my-5">
+        <div class="row mx-auto my-5"  id="bookEnterLocationContainer">
             <h3 class="mx-auto col-12 text-center">Let's start with your location.</h3>
             
-            <form class="mx-auto my-5 text-center" >
+            <form class="mx-auto my-5 text-center">
                 <div class="form-row">
-                    <div class="col-12 pb-3 col-sm-7">
+                    <!--<div class="col-12 pb-3 col-sm-7">
                         <input type="text" class="form-control" id="bookCityInput" placeholder="City">
                     </div>
                     <div class="col-7 col-sm-3 pb-3">
@@ -75,6 +75,9 @@
                     </div>
                     <div class="col-5 col-sm-2 pb-3">
                         <input type="text" class="form-control" id="bookZipInput" placeholder="Zip">
+                    </div>-->
+                    <div class="col pb-3">
+                        <input type="text" class="form-control" id="bookZipInput" placeholder="Enter your zip code">
                     </div>
                 </div>
 
@@ -82,8 +85,17 @@
             </form>
         </div>
 
+        <!--<div class="d-none" id="bookLocalCreatorsContainer">
+            <h3 class="mx-auto col-12 text-center" id="bookNumOfLocals"></h3>
+        </div>-->
+
         <!-- insert map code here -->
-        <div class="row col-8 mb-5 mx-auto" id="mapBoxContainer"></div>
+        <!--<div class="row col-8 mb-5 mx-auto" id="mapBoxContainer"></div>-->
+
+        <!-- Local User Cards -->
+        <div class="d-none" id="bookLocalUserCardsContainer">
+            <div class="card-deck col-xl-8 mx-auto" id="bookCardDeck"></div>
+        </div>
         
     </div>
     

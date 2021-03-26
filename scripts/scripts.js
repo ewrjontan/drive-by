@@ -18,70 +18,80 @@ let user1 = {
     firstName: "John",
     lastName: "Doe",
     age: 50,
-    zipCode: "68123"
+    zipCode: "68123",
+    rating: 5
 };
 
 let user2 = {
     firstName: "Jeremiah",
     lastName: "Johnson",
     age: 25,
-    zipCode: "68102"
+    zipCode: "68102",
+    rating: 4
 };
 
 let user3 = {
     firstName: "Mark",
-    lastName: "Matuza",
+    lastName: "Matooza",
     age: 38,
-    zipCode: "68154"
+    zipCode: "68154",
+    rating: 3
 };
 
 let user4 = {
     firstName: "Matt",
     lastName: "Donahue",
     age: 50,
-    zipCode: "65202"
+    zipCode: "65202",
+    rating: 3
 };
 
 let user5 = {
     firstName: "Jon",
     lastName: "Bon Jovi",
     age: 25,
-    zipCode: "65201"
+    zipCode: "65201",
+    rating: 1
 };
 
 let user6 = {
     firstName: "Tony",
     lastName: "Bologna",
     age: 38,
-    zipCode: "65203"
+    zipCode: "65203",
+    rating: 5
 };
 
 let user7 = {
     firstName: "Michael",
     lastName: "Meyers",
     age: 50,
-    zipCode: "07052"
+    zipCode: "07052",
+    rating: 2
 };
 
 let user8 = {
     firstName: "Katie",
-    lastName: "Rath",
+    lastName: "Rathshire",
     age: 25,
-    zipCode: "07056"
+    zipCode: "07056",
+    rating: 4
 };
 
 let user9 = {
     firstName: "Brenna",
     lastName: "Longacre",
     age: 25,
-    zipCode: "68154"
+    zipCode: "68154",
+    rating: 5
 };
 
 let user10 = {
     firstName: "Josh",
     lastName: "Popejoy",
     age: 29,
-    zipCode: "07052"
+    zipCode: "07052",
+    rating: 3
 };
 
 
@@ -130,9 +140,6 @@ $(function(){
         findLocals(userDatabaseArr, zipCodeArr);
     })
 
-    /*display number of locals on choose page*/
-    $("#chooseNumOfLocals").text(numOfLocals);
-
 });
     
 
@@ -154,17 +161,84 @@ function findLocals(userArr, zipCodeArr){
         if (zipCodeArr.includes(currentUserZip)){
             console.log("currentUserZip is in zip code array and pushed");
             //add user to array
-            localUserArr.push(currentUserZip);
+            localUserArr.push(userArr[i]);
         }
 
     }
     numOfLocals = localUserArr.length;
     console.log(numOfLocals);
+    document.getElementById("bookEnterLocationContainer").classList.add("d-none");
+    document.getElementById("bookFirstParagraph").classList.add("d-none");
+    //document.getElementById("bookLocalCreatorsContainer").classList.remove("d-none");
 
+    document.getElementById("bookMainHeader").innerHTML = numOfLocals + " creators were found in your area.";
+
+    displayCards(localUserArr);
+}
+
+function displayCards(localUserArr){
+    
+    for (let i=0; i < localUserArr.length; i++){
+        let name = localUserArr[i].firstName + " " + localUserArr[i].lastName;
+        let age = localUserArr[i].age;
+        let rating = localUserArr[i].rating;
+        console.log(name);
+        console.log(age);
+        console.log(rating);
+
+        let card = document.createElement('div');
+        card.className = 'card col-12 col-md-4';
+
+        let cardImage = document.createElement('img');
+        cardImage.className = "card-img-top";
+        //src
+        //alt
+
+        let cardBody = document.createElement('div');
+        cardBody.className = 'card-body';
+
+        let cardName = document.createElement('h5');
+        cardName.className = 'card-title';
+        cardName.innerHTML = name;
+
+        let cardAbout = document.createElement('p');
+        cardAbout.className = 'about-text';
+
+        let cardFooter = document.createElement('div');
+        cardFooter.className = 'card-footer';
+
+        let footerText = document.createElement('small');
+        footerText.className = "text-muted";
+        footerText.innerHTML = rating + "Stars";
+
+
+        cardBody.appendChild(cardName);
+        cardBody.appendChild(cardAbout);
+        cardFooter.appendChild(footerText);
+
+        card.appendChild(cardImage);
+        card.appendChild(cardBody);
+        card.appendChild(cardFooter);
+
+        document.getElementById("bookCardDeck").appendChild(card);
+    }
+
+    document.getElementById("bookLocalUserCardsContainer").classList.remove("d-none");
+
+    /*document.getElementById("bookCardDeck").innerHTML = 
+    <div class="card col-12 col-md-3">
+        <img class="card-img-top" src="#" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+    </div>*/
 
 }
-    
-
+   
 
     
     

@@ -14,97 +14,35 @@ function createMap(coordinates){
 
 /* Users */
 
-let user1 = {
-    firstName: "John",
-    lastName: "Doe",
-    age: 50,
-    zipCode: "68123",
-    rating: 5,
-    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
-};
+class User {
+    constructor(firstName, lastName, zipCode, rating, about){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.zipCode = zipCode;
+        this.rating = rating;
+        this.about = about;
+    }
+}
 
-let user2 = {
-    firstName: "Jeremiah",
-    lastName: "Johnson",
-    age: 25,
-    zipCode: "68102",
-    rating: 4,
-    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
-};
+let user1 = new User("John", "Doe", "68123", 5, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
 
-let user3 = {
-    firstName: "Mark",
-    lastName: "Matooza",
-    age: 38,
-    zipCode: "68154",
-    rating: 3,
-    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
-};
+let user2 = new User("Breana", "Taylor", "68102", 4, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
 
-let user4 = {
-    firstName: "Matt",
-    lastName: "Donahue",
-    age: 50,
-    zipCode: "65202",
-    rating: 3,
-    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
-};
+let user3 = new User("Bruce", "Leeroy", "68128", 2, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
 
-let user5 = {
-    firstName: "Jon",
-    lastName: "Bon Jovi",
-    age: 25,
-    zipCode: "65201",
-    rating: 1,
-    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
-};
+let user4 = new User("Ash", "Ketchum", "07052", 3, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
 
-let user6 = {
-    firstName: "Tony",
-    lastName: "Bologna",
-    age: 38,
-    zipCode: "65203",
-    rating: 5,
-    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
-};
+let user5 = new User("Kevin", "Bulbasaur", "65203", 5, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
 
-let user7 = {
-    firstName: "Michael",
-    lastName: "Meyers",
-    age: 50,
-    zipCode: "07052",
-    rating: 2,
-    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
-};
+let user6 = new User("Mark", "Machuka", "68123", 4, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
 
-let user8 = {
-    firstName: "Katie",
-    lastName: "Rathshire",
-    age: 25,
-    zipCode: "07056",
-    rating: 4,
-    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
-};
+let user7 = new User("Toni", "Bologna", "65201", 1, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
 
-let user9 = {
-    firstName: "Brenna",
-    lastName: "Longacre",
-    age: 25,
-    zipCode: "68154",
-    rating: 5,
-    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
-};
+let user8 = new User("Mike", "Hawk", "07052", 3, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
 
-let user10 = {
-    firstName: "Josh",
-    lastName: "Popejoy",
-    age: 29,
-    zipCode: "07052",
-    rating: 3,
-    about: "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision."
-};
+let user9 = new User("Katie", "Rath", "68154", 2, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
 
-
+let user10 = new User("John", "Smith", "65202", 4, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
 
 let userDatabaseArr = [user1, user2, user3, user4, user5, user6, user7, user8, user9, user10];
 let localUserArr = [];

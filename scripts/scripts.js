@@ -168,16 +168,24 @@ function displayCards(localUserArr){
         cardAbout.className = 'card-text';
         cardAbout.innerHTML = about;
 
-        let cardFooter = document.createElement('p');
-        cardFooter.className = 'card-text';
+        let cardFooter = document.createElement('div');
+        cardFooter.className = 'card-text col';
 
         let ratingText = document.createElement('small');
         ratingText.className = "text-muted";
         ratingText.innerHTML = rating + " Stars";
 
+        //add font awesome stars here
+
+
+        let portfolioButton = document.createElement('button');
+        portfolioButton.className = "btn btn-primary"
+        portfolioButton.innerHTML = "View Portfolio";
+
         imageContainer.appendChild(cardImage);
 
         cardFooter.appendChild(ratingText);
+        cardFooter.appendChild(portfolioButton);
 
         cardBody.appendChild(cardName);
         cardBody.appendChild(cardAbout);

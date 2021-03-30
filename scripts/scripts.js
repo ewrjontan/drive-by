@@ -176,7 +176,18 @@ function displayCards(localUserArr){
         ratingText.innerHTML = rating + " Stars";
 
         //add font awesome stars here
+        let emptyStar = document.createElement('i');
+        emptyStar.className = "far fa-star";
 
+        let fullStar = document.createElement('i');
+        fullStar.className = "fas fa-star" 
+
+        /*if (rating === 5){
+
+        }*/
+
+        //<i class="far fa-star"></i> blanks
+        //<i class="fas fa-star"></i> 
 
         let portfolioButton = document.createElement('button');
         portfolioButton.className = "btn btn-primary"

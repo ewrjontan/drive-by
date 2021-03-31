@@ -129,12 +129,10 @@ function displayCards(localUserArr){
 
     for (let i=0; i < localUserArr.length; i++){
         let name = localUserArr[i].firstName + " " + localUserArr[i].lastName;
-        let age = localUserArr[i].age;
         let rating = localUserArr[i].rating;
         let about = localUserArr[i].about;
-        console.log(name);
-        console.log(age);
-        console.log(rating);
+        console.log("User: " + name);
+        console.log("rating: " + rating);
 
         let card = document.createElement('div');
         card.className = 'card mb-4 style="max-width: 800px;"';
@@ -176,11 +174,12 @@ function displayCards(localUserArr){
         ratingText.innerHTML = rating + " Stars";
 
         //add font awesome stars here
-        let emptyStar = document.createElement('i');
+        
+        /*let emptyStar = document.createElement('i');
         emptyStar.className = "far fa-star";
 
         let fullStar = document.createElement('i');
-        fullStar.className = "fas fa-star" 
+        fullStar.className = "fas fa-star" */
 
         /*if (rating === 5){
 
@@ -196,6 +195,14 @@ function displayCards(localUserArr){
         imageContainer.appendChild(cardImage);
 
         cardFooter.appendChild(ratingText);
+
+        //test
+        let ratingStars = document.createElement('div');
+        ratingStars.innerHTML = generateRatingStars(rating);
+
+        cardFooter.appendChild(ratingStars);
+        
+        
         cardFooter.appendChild(portfolioButton);
 
         cardBody.appendChild(cardName);
@@ -234,7 +241,63 @@ function displayCards(localUserArr){
 }
    
 
-    
+function generateRatingStars(rating){
+    let blankStars, fullStars;
+    let ratingInnerHTML = "";
+
+    let ratingStars = document.createElement('div');
+    ratingStars.className = 'card-text col';
+
+    let blankStarElement = document.createElement('i');
+    blankStarElement.className = "far fa-star";
+
+    let fullStarElement = document.createElement('i');
+    fullStarElement.className = "fas fa-star"; 
+
+    switch(rating) {
+        case 1:
+            blankStars = 4;
+            fullStars = 1;
+            break;
+        case 2:
+            blankStars = 3;
+            fullStars = 2;
+            break;
+        case 3:
+            blankStars = 2;
+            fullStars = 3;
+            break;
+          case 4:
+            blankStars = 1;
+            fullStars = 4;
+            break;
+        case 5:
+            blankStars = 0;
+            fullStars = 5;
+            break;
+        default:
+            blankStars = 5;
+            fullStars = 0;
+      }
+
+    console.log("blank Stars: " + blankStars);
+    console.log("full Stars: " + fullStars);
+
+    for (j=0; j < fullStars; j++){
+        console.log("adding full star");
+        //ratingStars.appendChild(fullStarElement);
+        ratingInnerHTML += "<i class='fas fa-star'></i>";    
+    }
+
+    for (i=0; i < blankStars; i++){
+        console.log("adding blank star");
+        //ratingStars.appendChild(blankStarElement);
+        ratingInnerHTML += "<i class='far fa-star'></i>";    
+    }
+
+    console.log("Final innerHTML: " + ratingInnerHTML);
+    return ratingInnerHTML;
+} 
     
     /*For Position Stack */
     /*$("#bookingLocationSubmitBtn").on( "click", function(){

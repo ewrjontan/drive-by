@@ -15,34 +15,35 @@ function createMap(coordinates){
 /* Users */
 
 class User {
-    constructor(firstName, lastName, zipCode, rating, about){
+    constructor(firstName, lastName, zipCode, rating, about, numReviews){
         this.firstName = firstName;
         this.lastName = lastName;
         this.zipCode = zipCode;
         this.rating = rating;
         this.about = about;
+        this.numReviews = numReviews;
     }
 }
 
-let user1 = new User("John", "Doe", "68123", 5, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
+let user1 = new User("John", "Doe", "68123", 5, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.", 10);
 
-let user2 = new User("Breana", "Taylor", "68102", 4, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
+let user2 = new User("Breana", "Taylor", "68102", 4, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.", 6);
 
-let user3 = new User("Bruce", "Leeroy", "68128", 2, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
+let user3 = new User("Bruce", "Leeroy", "68128", 2, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.", 3);
 
-let user4 = new User("Ash", "Ketchum", "07052", 3, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
+let user4 = new User("Ash", "Ketchum", "07052", 3, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.", 4);
 
-let user5 = new User("Kevin", "Bulbasaur", "65203", 5, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
+let user5 = new User("Kevin", "Bulbasaur", "65203", 5, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.", 2);
 
-let user6 = new User("Mark", "Machuka", "68123", 4, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
+let user6 = new User("Mark", "Machuka", "68123", 4, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.", 20);
 
-let user7 = new User("Toni", "Bologna", "65201", 1, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
+let user7 = new User("Toni", "Bologna", "65201", 1, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.", 6);
 
-let user8 = new User("Mike", "Hawk", "07052", 3, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
+let user8 = new User("Mike", "Hawk", "07052", 3, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.", 3);
 
-let user9 = new User("Katie", "Rath", "68154", 2, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
+let user9 = new User("Katie", "Rath", "68154", 0, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.", 0);
 
-let user10 = new User("John", "Smith", "65202", 4, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.");
+let user10 = new User("John", "Smith", "65202", 4, "I am a photographer, videographer and drone operator. Avid car enthusiast with a love for art and media. I will try my hardest to give you the content that you envision.", 1);
 
 let userDatabaseArr = [user1, user2, user3, user4, user5, user6, user7, user8, user9, user10];
 let localUserArr = [];
@@ -131,6 +132,7 @@ function displayCards(localUserArr){
         let name = localUserArr[i].firstName + " " + localUserArr[i].lastName;
         let rating = localUserArr[i].rating;
         let about = localUserArr[i].about;
+        let numReviews = localUserArr[i].numReviews;
         console.log("User: " + name);
         console.log("rating: " + rating);
 
@@ -167,38 +169,23 @@ function displayCards(localUserArr){
         cardAbout.innerHTML = about;
 
         let cardFooter = document.createElement('div');
-        cardFooter.className = 'card-text col';
+        cardFooter.className = 'card-text bg-info row';
 
-        let ratingText = document.createElement('small');
+        /*let ratingText = document.createElement('small');
         ratingText.className = "text-muted";
-        ratingText.innerHTML = rating + " Stars";
+        ratingText.innerHTML = rating + " Stars";*/
 
-        //add font awesome stars here
-        
-        /*let emptyStar = document.createElement('i');
-        emptyStar.className = "far fa-star";
-
-        let fullStar = document.createElement('i');
-        fullStar.className = "fas fa-star" */
-
-        /*if (rating === 5){
-
-        }*/
-
-        //<i class="far fa-star"></i> blanks
-        //<i class="fas fa-star"></i> 
+        let ratingStars = document.createElement('div');
+        ratingStars.className = "col-12 col-md-8 bg-warning align-self-center"
+        ratingStars.innerHTML = generateRatingStars(rating);
 
         let portfolioButton = document.createElement('button');
-        portfolioButton.className = "btn btn-primary"
+        portfolioButton.className = "btn btn-primary col-12 col-md-4"
         portfolioButton.innerHTML = "View Portfolio";
 
         imageContainer.appendChild(cardImage);
 
-        cardFooter.appendChild(ratingText);
-
-        //test
-        let ratingStars = document.createElement('div');
-        ratingStars.innerHTML = generateRatingStars(rating);
+        //cardFooter.appendChild(ratingText);
 
         cardFooter.appendChild(ratingStars);
         
